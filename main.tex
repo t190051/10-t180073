@@ -1,0 +1,41 @@
+\documentclass[dvipdfmx,autodetect-engine]{jsarticle}
+\usepackage{tikz}
+
+\title{課題7}
+\author{t180073}
+
+\begin{document}
+
+\maketitle
+
+\section{区分求積法}
+$\int_{0}^{1}x^{2}dx$を区分求積法で求めた場合次の式となる
+\begin{equation}
+    \frac{1}{n}\times\frac{1}{n^2}+\frac{1}{n}\times\frac{2^2}{n^2}+...+\frac{1}{n}\times\frac{n^2}{n^2}
+\end{equation}
+この式より
+\begin{equation}
+    \frac{1}{n^3}\times\frac{n}{6}\times(n+1)\times(2n+1)=\frac{1}{3}+\frac{1}{2n}+\frac{1}{6n^2}
+\end{equation}
+なので$n$を無限に飛ばすと$\frac{1}{3}$に収束。
+\section{台形公式}
+$\int_{0}^{1}x^{2}dx$を台形公式で求めた場合次の式となる
+\begin{equation}
+    \frac{1}{2n}\times(\frac{1}{n^2}+\frac{2}{n}^2)+\frac{1}{2n}\times(\frac{2}{n}^2+\frac{3}{n}^2)+...+\frac{1}{2n}\times(\frac{n-1}{n}^2+\frac{n}{n}^2)
+\end{equation}
+この式より
+\begin{equation}
+    \frac{1}{2n^3}\times((n\times(n-1)\times\frac{2n-1}{6}+n\times(n+1)\times\frac{2n+1}{6}-1^2)=\frac{1}{3}+\frac{1}{6n^2}
+\end{equation}
+なので$n$を無限に飛ばすと$\frac{1}{3}$に収束。
+\section{区分求積法の誤差と台形公式の誤差どちらが小さいか}
+区分求積法の求めた式は
+\begin{equation}
+    \frac{1}{3}+\frac{1}{2n}+\frac{1}{6n^2}
+\end{equation}
+となり台形公式の求めた式は
+\begin{equation}
+    \frac{1}{3}+\frac{1}{6n^2}
+\end{equation}
+なので$\frac{1}{2n}$の差より台形公式の誤差のほうが小さい。
+\end{document}
